@@ -34,6 +34,10 @@ BOARD_KERNEL_SEPARATED_DT := true
 TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
 TARGET_SPECIFIC_HEADER_PATH += device/samsung/gtaxlwifi/include
 
+# Vendor separation
+TARGET_COPY_OUT_VENDOR := vendor
+AB_OTA_UPDATER := false
+
 # 000RU = recovery kernel, 000KU = system kernel
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --board FPRPGTAX000RU
 BOARD_CUSTOM_BOOTIMG_MK :=  device/samsung/gtaxlwifi/mkbootimg.mk
